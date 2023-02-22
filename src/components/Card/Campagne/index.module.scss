@@ -1,0 +1,37 @@
+.card{
+    &__wrapper{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    &__img img{
+        width: 100%;
+    }
+
+    &__content{
+        padding: .5rem;
+
+        &__title{
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .ressources{
+            ul{
+                display: flex;
+                gap: .5rem;
+                flex-wrap: auto;
+                justify-content: center;
+                margin: 1rem 0;
+                li{
+                    display: grid;
+                    text-align: center;
+
+                  
+                }
+            }
+        }
+    }
+}
+
+
