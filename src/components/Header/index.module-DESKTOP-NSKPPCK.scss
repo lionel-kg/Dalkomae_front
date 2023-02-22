@@ -1,0 +1,12 @@
+.header{
+    &__main{
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu{
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+}
