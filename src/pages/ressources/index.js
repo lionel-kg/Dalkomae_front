@@ -118,6 +118,9 @@ const Index = () => {
               }}
             />
           </div>
+          <div className={styles.add}>
+            <button onClick={() => router.push("/ressources/add")}>Ajouter une ressource</button>
+          </div>
         </div>
         <div className={styles.grid__wrapper}>
         {ressources && ressources.map((ressource, index) => (

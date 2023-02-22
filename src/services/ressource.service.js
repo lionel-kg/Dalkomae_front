@@ -38,5 +38,14 @@ export default {
           'Content-type': "application/json"
         },
       }).then(res => res.json())
+    },
+    createRessource(body){
+      return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ressource`, {
+        method: "POST",
+        headers: {
+          'Content-type': "application/json"
+        },
+        body: JSON.stringify(body)
+      }).then(res => res.json())
     }
 }

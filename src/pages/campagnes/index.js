@@ -71,8 +71,7 @@ const Index = () => {
                         query: {
                             id: campagne._id, // should be `title` not `id`
                         },
-                    }}
-                    
+                    }}       
                     >
                         <CardCampagne key={campagne._id} campagne={campagne}/>
                     </Link>
