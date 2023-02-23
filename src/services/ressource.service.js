@@ -7,6 +7,16 @@ export default {
         },
       }).then(res => res.json())
     },
+
+    getRessource(id) {
+      return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ressource/${id}`,{
+        method: "POST",
+        headers: {
+          'Content-type': "application/json"
+        },
+      },).then(res => res.json())
+    },
+
     getRessourcesByDate() {
       return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ressource/expiration-date`, {
         method: "GET",
@@ -42,6 +52,16 @@ export default {
     createRessource(body){
       return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ressource`, {
         method: "POST",
+        headers: {
+          'Content-type': "application/json"
+        },
+        body: JSON.stringify(body)
+      }).then(res => res.json())
+    },
+
+    updateRessource(id,body){
+      return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ressource/${id}`, {
+        method: "PUT",
         headers: {
           'Content-type': "application/json"
         },

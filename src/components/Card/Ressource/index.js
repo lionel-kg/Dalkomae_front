@@ -2,20 +2,18 @@ import React from 'react';
 import styles from "./index.module.scss";
 import Link from "next/link";
 import moment from 'moment'
+import { useRouter } from 'next/router';
 
 const Index = ({ressource, count, daysLeft, isExpired}) => {
-
+    const router = useRouter();
     
     return (
-        <div className={styles.card__wrapper}>
-            <Link href={{
-                        pathname: `/ressource/[id]`,
-                        query: {
-                            id: ressource._id, // should be `title` not `id`
-                        },
-                    }}
+        <div className={styles.card__wrapper} onClick={()=>{
+            router.push("/admin/ressource/"+ressource._id);
+        }}>
+            
                     
-            >
+        
                 <div className={styles.card__img}>
                     <img src={ressource.path} alt={ressource.img__alt}/>
                 </div>
@@ -46,7 +44,7 @@ const Index = ({ressource, count, daysLeft, isExpired}) => {
                     </ul>
                     
                 </div>
-            </Link>
+            
         </div>
     );
 }

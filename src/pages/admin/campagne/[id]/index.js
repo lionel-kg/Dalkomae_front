@@ -1,4 +1,4 @@
-import Input from '@/component/Input';
+import Input from '@/components/Input';
 import campagneService from '@/services/campagne.service';
 import { useRouter } from 'next/router';
 import {React, useEffect ,useState} from 'react';

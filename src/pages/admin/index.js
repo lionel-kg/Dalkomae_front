@@ -13,7 +13,7 @@ const Index = () => {
     const router = useRouter();
     useEffect(() => {
         campagneService.getCampagnes().then((res)=>{
-            let resData = res.data;
+            let resData = res;
             setCampagnes(resData);
             let keys = Object.keys(resData[0]);
             for (var key in keys) {

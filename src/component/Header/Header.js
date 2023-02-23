@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useContext, useEffect, useState } from 'react';
 import styles from "./index.module.scss";
-import Input from '../Input';
+import Input from '../../components/Input';
 import Logo from "../../../public/logo.png";
 
 import { AccountCircleRounded, Filter, FilterAlt, FilterAltRounded, Menu, SearchRounded, TuneSharp } from '@mui/icons-material';
